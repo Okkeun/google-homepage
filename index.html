@@ -9,7 +9,7 @@
         body{
             display: flex;
             flex-direction: column;
-            background-color: rgb(241, 231, 201);
+            background-color:white;
             font-size: 14px;
             font-family: Arial, sans-serif;
             color: rgb(61, 61, 61);
@@ -18,6 +18,57 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
+        }
+        .header-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            background-color:rgb(207, 205, 205);
+            height: 50px;
+        }
+        .register-button {
+            background-color:rgb(68, 109, 184);
+            color: white;
+            border-radius: 8%;
+        }
+        #register-button-size{
+            color: white;
+            height: 44px;
+            width: 5vw;
+            min-width: 100px;
+            max-width: 200px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+        }
+        .button-text-centered{
+            text-align: center;
+            text-justify: center;
+        }
+        .three-header-buttons-cont{
+            display: flex;
+            flex-direction: row;
+            align-self: flex-end;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            padding: 0px 2vw 0px 2vw;
+        }
+        .g-app-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 44px;
+            width: 3.5vw;
+            min-width: 44px;
+            max-width: 100px;
+        }
+        .g-app-button-pref{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
         }
         .logo-container {
             height: 30vh;
@@ -52,7 +103,7 @@
             min-width: 250px;
             max-width: 600px;
         }
-        .normalize{
+        button, input{
             border: none;
             background-image: none;
             background-color: transparent;
@@ -60,7 +111,26 @@
             -moz-webkit-box-shadow: none;
             box-shadow: none;
         }
+        button:hover{
+            border: 1px solid gray;
+        }
     </style>
+        <div class="header-container"> <!--Header-->
+            <div class="three-header-buttons-cont"> <!--Three g-buttons in header - container-->
+                <div class="g-app-button"> <!--Google app menu button-->
+                    <button type="image" class="g-app-button-pref"> 
+                        <image style="height: 28px; width: 28px;" src="https://image.flaticon.com/icons/png/128/3603/3603178.png">
+                    </button>
+                </div> 
+            </div>
+
+            <div class="register-button button-text-centered">  <!--Zaloguj sie button-->
+                <button class="normalize" id="register-button-size">Zaloguj się</button>
+            </div> 
+            <div></div> <!-- Grafika button-->
+            <div></div> <!--Gmail button-->
+        </div>
+
         <div class="logo-container basic-flex">   <!--Google's logo container-->
             <div class="logo"> <!--Google's logo-->
                 <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google's logo">
@@ -70,10 +140,12 @@
             <div class="search-bar-design">   <!--Search bar itself-->
                 <form role="search" action="">
                     <div> <!--Search bar BOX design-->
-                        <input class="normalize search-bar-input" style="border: rgba(228, 38, 38, 0.966);" placeholder="..." autofocus>
+                        <input class="normalize search-bar-input" placeholder="..." autofocus>
                     </div>
                 </form>
             </div>
         </div>
 </body>
 </html>
+
+<!--Input flex weight working not so well for now-->
