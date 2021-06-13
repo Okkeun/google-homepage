@@ -26,12 +26,39 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+            padding-bottom: 5vh;
         }
         .search-bar-container {
-            
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
         }
-        .search-bar {
-            border-radius: 6%;
+        .search-bar-design{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            border-radius: 20px;
+            border: 1px solid rgb(61, 61, 61);
+            height: 40px;
+            width: 60vw;
+            min-width: 250px;
+            max-width: 600px;
+        }
+        .search-bar-input{
+            height: 28px;
+            width: 55vw;
+            min-width: 250px;
+            max-width: 600px;
+        }
+        .normalize{
+            border: none;
+            background-image: none;
+            background-color: transparent;
+            -webkit-box-shadow: none;
+            -moz-webkit-box-shadow: none;
+            box-shadow: none;
         }
     </style>
         <div class="logo-container basic-flex">   <!--Google's logo container-->
@@ -39,10 +66,12 @@
                 <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google's logo">
             </div>
         </div>
-        <div class="basic-flex">   <!--Search bar container--> 
-            <div>   <!--Search bar itself-->
+        <div class="search-bar-container">   <!--Search bar container--> 
+            <div class="search-bar-design">   <!--Search bar itself-->
                 <form role="search" action="">
-                    <input class="search-bar" placeholder="..." checked>
+                    <div> <!--Search bar BOX design-->
+                        <input class="normalize search-bar-input" style="border: rgba(228, 38, 38, 0.966);" placeholder="..." autofocus>
+                    </div>
                 </form>
             </div>
         </div>
