@@ -1,0 +1,1 @@
+Purpose of this project is deconstruct Google homepage page and build it in my way in order to learn basics of HTML and CSS.

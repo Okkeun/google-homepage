@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google reconstructed</title>
+</head>
+
+<body>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(241, 231, 201);
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            color: rgb(61, 61, 61);
+        }
+        .basic-flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .logo-container {
+            height: 30vh;
+        }
+        .logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .search-bar-container {
+            
+        }
+        .search-bar {
+            border-radius: 6%;
+        }
+    </style>
+        <div class="logo-container basic-flex">   <!--Google's logo container-->
+            <div class="logo"> <!--Google's logo-->
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google's logo">
+            </div>
+        </div>
+        <div class="basic-flex">   <!--Search bar container--> 
+            <div>   <!--Search bar itself-->
+                <form role="search" action="">
+                    <input class="search-bar" placeholder="..." checked>
+                </form>
+            </div>
+        </div>
+</body>
+</html>
