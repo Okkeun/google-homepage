@@ -6,13 +6,10 @@
 
 <body>
     <style>
-        body{
+        body {
             display: flex;
             flex-direction: column;
-            background-color:white;
-            font-size: 14px;
-            font-family: Arial, sans-serif;
-            color: rgb(61, 61, 61);
+            background-color: #fff;
         }
         .basic-flex {
             display: flex;
@@ -24,8 +21,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: flex-end;
-            background-color:rgb(207, 205, 205);
-            height: 50px;
+            height: 40px;
         }
         .register-button {
             background-color:rgb(68, 109, 184);
@@ -34,8 +30,8 @@
         }
         #register-button-size{
             color: white;
-            height: 44px;
-            width: 5vw;
+            height: 34px;
+            width: 9.5vw;
             min-width: 100px;
             max-width: 200px;
             padding-bottom: 5px;
@@ -51,7 +47,7 @@
             align-self: flex-end;
             align-items: center;
             justify-content: center;
-            height: 50px;
+            height: 40px;
             padding: 0px 2vw 0px 2vw;
         }
         .g-app-button{
@@ -70,8 +66,13 @@
             width: 8.5vw;
             height: 34px;
         }
+        .middle-container {
+            display: flex;
+            justify-content: center;
+            height: 70px;
+        }
         .logo-container {
-            height: 30vh;
+            height: 25vh;
         }
         .logo {
             display: flex;
@@ -88,7 +89,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: center; 
             box-sizing: border-box;
             border-radius: 20px;
             border: 1px solid rgb(61, 61, 61);
@@ -103,6 +104,16 @@
             min-width: 250px;
             max-width: 600px;
         }
+        .search-buttons-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .under-sbar-buttons {
+            height: 34px;
+            width: 150px;
+            padding: 5px 5px 5px 5px;
+        }
         button, input{
             border: none;
             background-image: none;
@@ -110,6 +121,10 @@
             -webkit-box-shadow: none;
             -moz-webkit-box-shadow: none;
             box-shadow: none;
+
+            font-size: 14px;
+            font-family: arial,sans-serif;
+            color: #222;
         }
         button:hover{
             border: 1px solid gray;
@@ -137,19 +152,29 @@
             <div></div> <!-- Grafika button-->
             <div></div> <!--Gmail button-->
         </div>
-
         <div class="logo-container basic-flex">   <!--Google's logo container-->
             <div class="logo"> <!--Google's logo-->
                 <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google's logo">
             </div>
         </div>
-        <div class="search-bar-container">   <!--Search bar container--> 
-            <div class="search-bar-design">   <!--Search bar itself-->
-                <form role="search" action="">
-                    <div> <!--Search bar BOX design-->
-                        <input class="normalize search-bar-input" placeholder="..." autofocus>
-                    </div>
-                </form>
+        <div class="middle-container"> <!--Middle container with search bar and buttons-->    
+            <div class="search-bar-container">   <!--Search bar container--> 
+                <div class="search-bar-design">   <!--Search bar itself-->
+                    <form role="search" action="">
+                        <div> <!--Search bar BOX design-->
+                            <input class="normalize search-bar-input" placeholder="..." autofocus>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-buttons-container"> <!--Under search-bar buttons container-->
+            <div>
+                <button class="under-sbar-buttons global-font-pref">Szukaj w google</button>
+            </div>
+            <div>
+                <button class="under-sbar-buttons global-font-pref">Szczęśliwy traf</button>
             </div>
         </div>
 </body>
