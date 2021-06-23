@@ -21,7 +21,7 @@
             flex-direction: row;
             justify-content: center;
         }
-        .header-container {
+        .navbar-container {
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -146,7 +146,7 @@
             margin: auto;
         }
     </style>
-        <div class="header-container"> <!--Header-->
+        <nav class="navbar-container"> <!--Header-->
             <div class="three-header-buttons-cont"> <!--Three g-buttons in header - container-->
                 <div class="g-app-button"> <!--Google app menu button-->
                     <button type="button" class="g-app-button-pref">Gmail</button>
@@ -167,7 +167,7 @@
             </div> 
             <div></div> <!-- Grafika button-->
             <div></div> <!--Gmail button-->
-        </div>
+        </nav>
             <div class="logo-container basic-flex">   <!--Google's logo container-->
                 <div class="logo"> <!--Google's logo-->
                     <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google's logo">
@@ -176,10 +176,8 @@
             <div class="middle-container"> <!--Middle container with search bar and buttons-->    
                 <div class="search-bar-container">   <!--Search bar container--> 
                     <div class="search-bar-design">   <!--Search bar itself-->
-                        <form role="search" action="">
-                            <div> <!--Search bar BOX design-->
-                                <input class="normalize search-bar-input" placeholder="..." autofocus>
-                            </div>
+                        <form role="search" action=""> <!--Search bar BOX design-->
+                            <input class="normalize search-bar-input" placeholder="..." autofocus>
                         </form>
                     </div>
                 </div>
@@ -196,7 +194,7 @@
         <p style="display: flex; align-self: center; padding-top: 20px; font-size: 12px;">
             Trwają szczepienia przeciw COVID-19. <a href="https://www.google.pl/search?q=punkty+szczepie%C5%84+COVID">Znajdź punkt szczepień w pobliżu</a></p>
 
-        <div class="footer-container">
+        <footer class="footer-container">
             <div class="footer"> <!--Upper footer-->
 
             
@@ -208,7 +206,7 @@
             <div class="footer"> <!--Bottom one-->
 
             </div>
-        </div>
+        </footer>
 </body>
 </html>
 
