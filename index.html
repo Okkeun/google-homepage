@@ -6,6 +6,11 @@
 
 <body>
     <style>
+        html {
+            font-size: 14px;
+            font-family: arial,sans-serif;
+            color: #222;
+        }
         body {
             display: flex;
             flex-direction: column;
@@ -114,20 +119,31 @@
             width: 150px;
             padding: 5px 5px 5px 5px;
         }
-        button, input{
+        .footer-container {
+            position: absolute;
+            flex-direction: column;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+        }
+        .footer {
+            height: 40px;
+            background-color: #f2f2f2;
+        }
+        button, input, p{
             border: none;
             background-image: none;
             background-color: transparent;
             -webkit-box-shadow: none;
             -moz-webkit-box-shadow: none;
             box-shadow: none;
-
-            font-size: 14px;
-            font-family: arial,sans-serif;
-            color: #222;
         }
         button:hover{
             border: 1px solid gray;
+        }
+        hr {
+            border: 1px solid #d4d4d4;
+            margin: auto;
         }
     </style>
         <div class="header-container"> <!--Header-->
@@ -152,29 +168,45 @@
             <div></div> <!-- Grafika button-->
             <div></div> <!--Gmail button-->
         </div>
-        <div class="logo-container basic-flex">   <!--Google's logo container-->
-            <div class="logo"> <!--Google's logo-->
-                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google's logo">
-            </div>
-        </div>
-        <div class="middle-container"> <!--Middle container with search bar and buttons-->    
-            <div class="search-bar-container">   <!--Search bar container--> 
-                <div class="search-bar-design">   <!--Search bar itself-->
-                    <form role="search" action="">
-                        <div> <!--Search bar BOX design-->
-                            <input class="normalize search-bar-input" placeholder="..." autofocus>
-                        </div>
-                    </form>
+            <div class="logo-container basic-flex">   <!--Google's logo container-->
+                <div class="logo"> <!--Google's logo-->
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google's logo">
                 </div>
             </div>
-        </div>
-
-        <div class="search-buttons-container"> <!--Under search-bar buttons container-->
-            <div>
-                <button class="under-sbar-buttons global-font-pref">Szukaj w google</button>
+            <div class="middle-container"> <!--Middle container with search bar and buttons-->    
+                <div class="search-bar-container">   <!--Search bar container--> 
+                    <div class="search-bar-design">   <!--Search bar itself-->
+                        <form role="search" action="">
+                            <div> <!--Search bar BOX design-->
+                                <input class="normalize search-bar-input" placeholder="..." autofocus>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div>
-                <button class="under-sbar-buttons global-font-pref">Szczęśliwy traf</button>
+
+            <div class="search-buttons-container"> <!--Under search-bar buttons container-->
+                <div>
+                    <button class="under-sbar-buttons global-font-pref">Szukaj w google</button>
+                </div>
+                <div>
+                    <button class="under-sbar-buttons global-font-pref">Szczęśliwy traf</button>
+                </div>
+            </div>
+        <p style="display: flex; align-self: center; padding-top: 20px; font-size: 12px;">
+            Trwają szczepienia przeciw COVID-19. <a href="https://www.google.pl/search?q=punkty+szczepie%C5%84+COVID">Znajdź punkt szczepień w pobliżu</a></p>
+
+        <div class="footer-container">
+            <div class="footer"> <!--Upper footer-->
+
+            
+            </div>
+        <hr>
+            <div class="footer"> <!--Middle one-->
+
+            </div>
+            <div class="footer"> <!--Bottom one-->
+
             </div>
         </div>
 </body>
