@@ -127,8 +127,16 @@
             width: 100%;
         }
         .footer {
+            position: relative;
             height: 40px;
             background-color: #f2f2f2;
+        }
+        .bottom-grid-footer {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+        #footer-button {
+
         }
         button, input, p{
             border: none;
@@ -149,10 +157,10 @@
         <nav class="navbar-container"> <!--Header-->
             <div class="three-header-buttons-cont"> <!--Three g-buttons in header - container-->
                 <div class="g-app-button"> <!--Google app menu button-->
-                    <button type="button" class="g-app-button-pref">Gmail</button>
+                    <p class="g-app-button-pref">Gmail</p>
                 </div> 
                 <div class="g-app-button"> <!--Google app menu button-->
-                    <button type="button" class="g-app-button-pref">Grafika</button>
+                    <p class="g-app-button-pref">Grafika</p>
                 </div> 
 
                 <div class="g-app-button"> <!--Google app menu button-->
@@ -191,20 +199,21 @@
                     <button class="under-sbar-buttons global-font-pref">Szczęśliwy traf</button>
                 </div>
             </div>
-        <p style="display: flex; align-self: center; padding-top: 20px; font-size: 12px;">
-            Trwają szczepienia przeciw COVID-19. <a href="https://www.google.pl/search?q=punkty+szczepie%C5%84+COVID">Znajdź punkt szczepień w pobliżu</a></p>
+        <p style="display: flex; align-self: center; padding-top: 20px; font-size: 13px;">
+            Korzystaj z Google w tych językach: &#160 <a href="https://www.google.pl/search?q=punkty+szczepie%C5%84+COVID"> English</a></p>
 
         <footer class="footer-container">
             <div class="footer"> <!--Upper footer-->
-
-            
+                <p style="position: absolute; left: 30px;">
+                Polska</p>
             </div>
         <hr>
             <div class="footer"> <!--Middle one-->
-
+                
             </div>
-            <div class="footer"> <!--Bottom one-->
-
+            <div class="footer bottom-grid-footer "> <!--Bottom one with display: grid-->
+                <p id="footer-button"><a href="">O nas</a></p>
+                <p id="footer-button"><a href="">O nas</a></p>
             </div>
         </footer>
 </body>
