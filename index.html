@@ -121,7 +121,6 @@
         }
         .footer-container {
             position: absolute;
-            flex-direction: column;
             bottom: 0px;
             left: 0px;
             width: 100%;
@@ -131,13 +130,39 @@
             height: 40px;
             background-color: #f2f2f2;
         }
+
         .bottom-grid-footer {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
         }
+            .footer-text-l{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                width: 36vw;
+            }
+            .footer-text-c{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                padding: 0 2rem 0 2rem;
+            }
+            .footer-text-r{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                width: 36vw;
+            }
         .footer-button {
             color: #70757a;
             text-decoration: none;
+
+            padding: 0 1rem 0 1rem;
         }
         a {
             color: inherit;
@@ -216,12 +241,24 @@
                 Polska</p>
             </div>
         <hr>
-            <div class="footer"> <!--Middle one-->
-                
-            </div>
-            <div class="footer bottom-grid-footer "> <!--Bottom one with display: grid-->
-                <p class="footer-button"><a href="">O nas</a></p>
-                <p class="footer-button"><a href="">O nas</a></p>
+            <div class="footer bottom-grid-footer"> <!--Bottom one with display: grid-->
+                <div class="footer-text-l"> <!--Lewy container na linki-->
+                    <div class="footer-button"><a href="">O nas</a></div>
+                    <div class="footer-button"><a href="">Reklamuj się</a></div>
+                    <div class="footer-button"><a href="">Dla firm</a></div>
+                    <div class="footer-button"><a href="">Jak działa wyszukiwarka</a></div>
+                </div>
+
+                <div class="footer-text-c">  <!--Centralny container na środkowy link-->
+                    <img src="images/leaf.png" style="width: 12px;">
+                    <div class="footer-button"><a href="">Neutralność węglowa od 2007 roku</a></div>
+                </div>
+
+                <div class="footer-text-r">   <!--Prawy container na linki-->
+                    <div class="footer-button"><a href="">Prywatność</a></div>
+                    <div class="footer-button"><a href="">Warunki</a></div>
+                    <div class="footer-button"><a href="">Ustawienia</a></div>
+                </div>
             </div>
         </footer>
 </body>
