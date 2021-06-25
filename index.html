@@ -15,6 +15,7 @@
             display: flex;
             flex-direction: column;
             background-color: #fff;
+            min-height: 570px;
         }
         .basic-flex {
             display: flex;
@@ -127,37 +128,120 @@
         }
         .footer {
             position: relative;
-            height: 40px;
+            height: 48px;
             background-color: #f2f2f2;
         }
+        .footer-flex-one {
+            background-color: #f2f2f2;;
+        }
 
-        .bottom-grid-footer {
+        .bottom-footer {
             display: flex;
             flex-direction: row;
             justify-content: center;
+            min-width: 250px;
         }
             .footer-text-l{
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
-                width: 36vw;
+                text-align: center;
             }
-            .footer-text-c{
+            .footer-text-c-bottom{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-
+                height: 48px;
                 padding: 0 2rem 0 2rem;
+                text-align: center;
+            }
+            .footer-text-c-upper{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: 48px;
             }
             .footer-text-r{
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-end;
                 align-items: center;
-                width: 36vw;
+                text-align: center;
             }
+
+            @media (min-width: 1200px){
+                .footer-flex-one {
+                    display: flex;
+                }
+                .footer-text-l{
+                    width: 36vw;
+                }
+                .footer-text-c-upper{
+                    display: none;
+                }
+                .footer-text-c-bottom{
+                    display: flex;
+                }
+                .footer-text-r{
+                    width: 36vw;
+                }
+            }
+
+            @media (max-width: 1200px){
+                .footer-flex-one {
+                    display: flex;
+                    height: 48px;
+                }
+                .footer-text-l{
+                    height: 48px;
+                    width: 50vw;
+                    align-self: flex-start;
+                    padding-left: 2vw;
+                }
+                .footer-text-c-upper{
+                    display: flex;
+                    margin: auto;
+                }
+                .footer-text-c-bottom{
+                    display: none;
+                }
+                .footer-text-r{
+                    height: 48px;
+                    width: 50vw;
+                    align-self: flex-end;
+                    padding-right: 2vw;
+                }
+            }
+            @media (max-width: 750px){
+                .footer-flex-one {
+                    display: flex;
+                    height: 48px;
+                }
+                .footer-text-l{
+                    height: 48px;
+                    width: 50vw;
+                    align-self: flex-start;
+                    padding-left: 2vw;
+                }
+                .footer-text-c-upper{
+                    display: flex;
+                    margin: auto;
+                }
+                .footer-text-c-bottom{
+                    display: none;
+                }
+                .footer-text-r{
+                    height: 48px;
+                    width: 50vw;
+                    align-self: flex-end;
+                    padding-right: 2vw;
+                }
+            }
+
         .footer-button {
             color: #70757a;
             text-decoration: none;
@@ -183,7 +267,7 @@
             border: 1px solid gray;
         }
         hr {
-            border: 1px solid #d4d4d4;
+            border: 0.1px solid #d4d4d4;
             margin: auto;
         }
     </style>
@@ -193,7 +277,7 @@
                     <p class="g-app-button-pref"><a href="">Gmail</p></a>
                 </div> 
                 <div class="g-app-button"> <!--Google app menu button-->
-                    <p class="g-app-button-pref"><a href=""></a>Grafika</p></a>
+                    <p class="g-app-button-pref"><a href="">Grafika</p></a>
                 </div> 
 
                 <div class="g-app-button"> <!--Google app menu button-->
@@ -237,29 +321,35 @@
 
         <footer class="footer-container">
             <div class="footer"> <!--Upper footer-->
-                <p style="position: absolute; left: 30px;">
+                <p style="position: absolute; left: 30px; color: #70757a">
                 Polska</p>
             </div>
         <hr>
-            <div class="footer bottom-grid-footer"> <!--Bottom one with display: grid-->
-                <div class="footer-text-l"> <!--Lewy container na linki-->
-                    <div class="footer-button"><a href="">O nas</a></div>
-                    <div class="footer-button"><a href="">Reklamuj się</a></div>
-                    <div class="footer-button"><a href="">Dla firm</a></div>
-                    <div class="footer-button"><a href="">Jak działa wyszukiwarka</a></div>
-                </div>
-
-                <div class="footer-text-c">  <!--Centralny container na środkowy link-->
+            <div class="footer-flex-one"> <!--Prototype FLEX-->
+                <div class="footer-text-c-upper">  
                     <img src="images/leaf.png" style="width: 12px;">
                     <div class="footer-button"><a href="">Neutralność węglowa od 2007 roku</a></div>
                 </div>
-
-                <div class="footer-text-r">   <!--Prawy container na linki-->
-                    <div class="footer-button"><a href="">Prywatność</a></div>
-                    <div class="footer-button"><a href="">Warunki</a></div>
-                    <div class="footer-button"><a href="">Ustawienia</a></div>
-                </div>
             </div>
+                <div class="footer bottom-footer"> 
+                    <div class="footer-text-l"> <!--Lewy container na linki-->
+                        <div class="footer-button"><a href="">O nas</a></div>
+                        <div class="footer-button"><a href="">Reklamuj się</a></div>
+                        <div class="footer-button"><a href="">Dla firm</a></div>
+                        <div class="footer-button"><a href="">Jak działa wyszukiwarka</a></div>
+                    </div>
+
+                    <div class="footer-text-c-bottom">  <!--Centralny container na środkowy link-->
+                        <img src="images/leaf.png" style="width: 12px;">
+                        <div class="footer-button"><a href="">Neutralność węglowa od 2007 roku</a></div>
+                    </div>
+
+                    <div class="footer-text-r">   <!--Prawy container na linki-->
+                        <div class="footer-button"><a href="">Prywatność</a></div>
+                        <div class="footer-button"><a href="">Warunki</a></div>
+                        <div class="footer-button"><a href="">Ustawienia</a></div>
+                    </div>
+                </div>
         </footer>
 </body>
 </html>
