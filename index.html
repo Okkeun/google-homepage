@@ -107,8 +107,8 @@
         .search-bar-input{
             height: 28px;
             width: 55vw;
-            min-width: 250px;
-            max-width: 600px;
+            min-width: 200px;
+            max-width: 560px;
         }
         .search-buttons-container {
             display: flex;
@@ -264,7 +264,8 @@
             box-shadow: none;
         }
         button:hover{
-            border: 1px solid gray;
+            border: 1px solid rgb(214, 214, 214);
+            border-radius: 5px;
         }
         hr {
             border: 0.1px solid #d4d4d4;
@@ -288,7 +289,7 @@
             </div>
 
             <div class="register-button button-text-centered">  <!--Zaloguj sie button-->
-                <button class="normalize" id="register-button-size">Zaloguj się</button>
+                <button id="register-button-size">Zaloguj się</button>
             </div> 
             <div></div> <!-- Grafika button-->
             <div></div> <!--Gmail button-->
@@ -302,7 +303,7 @@
                 <div class="search-bar-container">   <!--Search bar container--> 
                     <div class="search-bar-design">   <!--Search bar itself-->
                         <form role="search" action=""> <!--Search bar BOX design-->
-                            <input class="normalize search-bar-input" placeholder="..." autofocus>
+                            <input class="search-bar-input" placeholder="..." autofocus>
                         </form>
                     </div>
                 </div>
@@ -310,10 +311,10 @@
 
             <div class="search-buttons-container"> <!--Under search-bar buttons container-->
                 <div>
-                    <button class="under-sbar-buttons global-font-pref">Szukaj w google</button>
+                    <button class="under-sbar-buttons">Szukaj w google</button>
                 </div>
                 <div>
-                    <button class="under-sbar-buttons global-font-pref">Szczęśliwy traf</button>
+                    <button class="under-sbar-buttons">Szczęśliwy traf</button>
                 </div>
             </div>
         <p style="display: flex; align-self: center; padding-top: 20px; font-size: 13px;">
